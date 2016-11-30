@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
-using Emgu.CV.UI;
 using Telerik.WinControls.UI;
+
+
 
 namespace Asistente
 {
@@ -20,27 +17,32 @@ namespace Asistente
         {
             InitializeComponent();
         }
-        private Capture _capture;
+        private  Capture _capture;
         private readonly Capturadora _capt=new Capturadora();
         Timer _timer;
         private Timer _watcher;
-        private double nocaptimevar = 0;
+        private double _nocaptimevar;
         private double _elapsedtime;
-      
-       
+        //////////////////
+    
         private void Form1_Load(object sender, EventArgs e)
         {
            
+            //   imgCamUser.ZoomScale = 2.0;  // zoom in by 2x
+            Rectangle res = Screen.PrimaryScreen.Bounds;
+            // Calculate location (etc. 1366 Width - form size...)
+            this.Location = new Point(res.Width - Size.Width,res.Height-Size.Height);
             _capture = new Capture();
             _timer=new Timer();
+          //  _timer.Interval = 1;
             _timer.Tick += Timer_Tick;
             _timer.Start();
 
             _watcher = new Timer();
-            _watcher.Interval = 100;
+         //   _watcher.Interval = 100;
             _watcher.Tick += Watcher;
             _watcher.Start();
-          
+           //
             //  this.WindowState= FormWindowState.Minimized;
             //Hide();
             VideosForm f=new VideosForm();
@@ -51,26 +53,15 @@ namespace Asistente
         private void Watcher(object sender, EventArgs e)
         {
             imgCamUser.Image = (IImage) _capt.ImagenOut;
-            nocapttime.Text = _capt.NocaptTime.ToString(CultureInfo.InvariantCulture);
-            if (_capt.Capturing)
-            {
-                _elapsedtime = 0;
-            }
-          
+            imgCamUser.SetZoomScale(0.5, new Point(0, 0));
+            nocapttime.Text = _nocaptimevar.ToString(CultureInfo.InvariantCulture);
+        
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
             _elapsedtime += _timer.Interval;
-            _capt.Capture(_capture,  _elapsedtime, nocaptimevar);
-            if (_capt.Threeminflag)
-            {
-                _elapsedtime = 0;
-                _capt.NocaptTime = 0;
-
-            }
-          
-
+            _capt.Capture(_capture,ref _elapsedtime,ref _nocaptimevar);
         }
 
        

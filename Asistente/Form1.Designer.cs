@@ -33,11 +33,15 @@
             this.imgCamUser = new Emgu.CV.UI.ImageBox();
             this.nocapttime = new Telerik.WinControls.UI.RadTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nocapttime)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,49 +50,68 @@
             this.imgCamUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imgCamUser.Location = new System.Drawing.Point(3, 3);
             this.imgCamUser.Name = "imgCamUser";
-            this.imgCamUser.Size = new System.Drawing.Size(554, 350);
-            this.imgCamUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imgCamUser.Size = new System.Drawing.Size(373, 199);
             this.imgCamUser.TabIndex = 2;
             this.imgCamUser.TabStop = false;
             // 
             // nocapttime
             // 
-            this.nocapttime.Location = new System.Drawing.Point(3, 383);
+            this.nocapttime.Location = new System.Drawing.Point(3, 232);
             this.nocapttime.Name = "nocapttime";
             this.nocapttime.ReadOnly = true;
-            this.nocapttime.Size = new System.Drawing.Size(167, 20);
+            this.nocapttime.Size = new System.Drawing.Size(114, 20);
             this.nocapttime.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.nocapttime, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.radTextBox1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.radLabel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.imgCamUser, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nocapttime, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.radLabel2, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 406);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 302);
             this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // radTextBox1
+            // 
+            this.radTextBox1.Location = new System.Drawing.Point(3, 285);
+            this.radTextBox1.Name = "radTextBox1";
+            this.radTextBox1.ReadOnly = true;
+            this.radTextBox1.Size = new System.Drawing.Size(114, 20);
+            this.radTextBox1.TabIndex = 4;
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(3, 359);
+            this.radLabel1.Location = new System.Drawing.Point(3, 208);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(114, 18);
             this.radLabel1.TabIndex = 5;
             this.radLabel1.Text = "Tiempo sin reconocer";
             // 
+            // radLabel2
+            // 
+            this.radLabel2.Location = new System.Drawing.Point(3, 258);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(45, 18);
+            this.radLabel2.TabIndex = 6;
+            this.radLabel2.Text = "Go capt";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 406);
+            this.ClientSize = new System.Drawing.Size(379, 302);
             this.Controls.Add(this.tableLayoutPanel1);
             this.IconScaling = Telerik.WinControls.Enumerations.ImageScaling.None;
             this.Name = "Form1";
@@ -103,7 +126,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nocapttime)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -116,6 +141,8 @@
         private Telerik.WinControls.UI.RadTextBox nocapttime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadTextBox radTextBox1;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
     }
 }
 

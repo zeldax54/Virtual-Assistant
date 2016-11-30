@@ -21,8 +21,6 @@ C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\msvcp120.dll
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\msvcr120.dll
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\opencv_ffmpeg310_64.dll
-C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\haarcascade_eye.xml
-C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\haarcascade_frontalface_default.xml
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Interop.WMPLib.dll
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Interop.WMPLib.dll
@@ -30,4 +28,48 @@ C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.csproj.ResolveComReference.cache
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.VideosForm.resources
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\buscando.mp4
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Emgu.Util.dll
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\eye.xml
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\face.xml
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.Browser.resources
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Telerik.WinControls.Themes.TelerikMetro.dll
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Telerik.WinControls.Themes.TelerikMetroTouch.dll
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\generico.mp4
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\interactuando.mp4
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\ubicacion.mp4
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Interop.WMPLib.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\AxInterop.WMPLib.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.csproj.ResolveComReference.cache
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.exe
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.pdb
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\cvextern.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\eye.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\face.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\msvcp120.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\msvcr120.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\opencv_ffmpeg310_64.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Resources\generico.mp4
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Resources\interactuando.mp4
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Resources\ubicacion.mp4
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Resources\buscando.mp4
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Asistente.exe
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Asistente.pdb
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.Themes.TelerikMetro.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.Themes.TelerikMetroTouch.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.UI.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\TelerikCommon.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\ZedGraph.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Emgu.CV.UI.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Emgu.CV.World.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Telerik.WinControls.UI.xml
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\Interop.WMPLib.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\bin\Debug\AxInterop.WMPLib.dll
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.csprojResolveAssemblyReference.cache
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.Browser.resources
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.Form1.resources
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.Properties.Resources.resources
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.VideosForm.resources
+D:\HLTemp\ClonGitHub\Virtual-Assistant\Asistente\obj\Debug\Asistente.csproj.GenerateResource.Cache

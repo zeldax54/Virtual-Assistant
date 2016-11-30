@@ -73,9 +73,29 @@ namespace Asistente.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] generico {
+            get {
+                object obj = ResourceManager.GetObject("generico", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] interactuando {
             get {
                 object obj = ResourceManager.GetObject("interactuando", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ubicacion {
+            get {
+                object obj = ResourceManager.GetObject("ubicacion", resourceCulture);
                 return ((byte[])(obj));
             }
         }
