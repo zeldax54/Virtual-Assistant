@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
@@ -46,9 +48,12 @@ namespace Asistente
             //  this.WindowState= FormWindowState.Minimized;
             //Hide();
             VideosForm f=new VideosForm();
+           
             f.c = _capt;
             f.Show();
         }
+
+   
 
         private void Watcher(object sender, EventArgs e)
         {

@@ -71,7 +71,7 @@ namespace Asistente
                             imageFrame.Draw(eye, new Bgr(Color.Aqua), 3, Emgu.CV.CvEnum.LineType.AntiAlias);
                     }
                 }
-                ImagenOut = imageFrame;
+                ImagenOut = imageFrame?.SmoothGaussian(5, 5, 2, 0);
                 nocapttime = (nocapttime/1000);
             }
         }

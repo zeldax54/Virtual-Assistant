@@ -33,10 +33,15 @@
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.reproductor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
+            this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +57,7 @@
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(12, 339);
+            this.radButton1.Location = new System.Drawing.Point(5, 21);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(110, 24);
             this.radButton1.TabIndex = 1;
@@ -81,14 +86,36 @@
             this.radLabel2.Text = "radLabel2";
             this.radLabel2.ThemeName = "TelerikMetroTouch";
             // 
+            // radGroupBox1
+            // 
+            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.radButton1);
+            this.radGroupBox1.Controls.Add(this.radButton2);
+            this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.Location = new System.Drawing.Point(0, 325);
+            this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Size = new System.Drawing.Size(628, 50);
+            this.radGroupBox1.TabIndex = 4;
+            this.radGroupBox1.Text = "radGroupBox1";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Location = new System.Drawing.Point(121, 21);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(110, 24);
+            this.radButton2.TabIndex = 2;
+            this.radButton2.Text = "Tomar Foto";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
+            // 
             // VideosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 375);
+            this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.radLabel1);
-            this.Controls.Add(this.radButton1);
             this.Controls.Add(this.reproductor);
             this.Name = "VideosForm";
             // 
@@ -102,6 +129,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
+            this.radGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,5 +144,7 @@
         private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        private Telerik.WinControls.UI.RadButton radButton2;
     }
 }

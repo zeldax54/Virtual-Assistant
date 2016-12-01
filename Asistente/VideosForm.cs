@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Windows.Forms;
-using Asistente.Properties;
-using Telerik.WinControls.Drawing;
 using Telerik.WinControls.UI;
-using System.IO;
 using WMPLib;
 
 namespace Asistente
@@ -28,12 +17,10 @@ namespace Asistente
         private readonly string generico = "generico.mp4";
         private readonly string ubicacion = "ubicacion.mp4";
         public Capturadora c;
-     
-        
         private void VideosForm_Load(object sender, EventArgs e)
         {
             HideLabels();
-            radButton1.Visible = false;
+            HidePanel();
             // res.Location
             // Calculate location (etc. 1366 Width - form size...)
             reproductor.settings.setMode("loop", true);
@@ -43,21 +30,21 @@ namespace Asistente
           //  reproductor.PlayStateChange += Reproductor_PlayStateChange;
         }
 
-        private void Reproductor_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
-        {
-            if (reproductor.playState == WMPPlayState.wmppsMediaEnded)
-            {
-                if (reproductor.URL.Contains(generico) || reproductor.URL.Contains(ubicacion))
-                {
-                    HideLabels();
-                   PlayVideo(interactuando);
-                }
-            }
-        }
+        //private void Reproductor_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        //{
+        //    if (reproductor.playState == WMPPlayState.wmppsMediaEnded)
+        //    {
+        //        if (reproductor.URL.Contains(generico) || reproductor.URL.Contains(ubicacion))
+        //        {
+        //           HideLabels();
+        //           PlayVideo(interactuando);
+        //        }
+        //    }
+        //}
 
         private void Browser_Play(object p)
         {
-            radButton1.Visible = true;
+            ShowPanel();
             if (p == null)
             {
                 if (!reproductor.URL.Contains(generico))
@@ -74,9 +61,12 @@ namespace Asistente
         private void C_OnNoCapturing()
         {
             HideLabels();
-            radButton1.Visible = false;
-         if(b.Visible)
+           HidePanel();
+         if(b!=null && b.Visible)
                 b.Close();
+            if (t != null && t.Visible)
+                t.Close();
+
             if (!reproductor.URL.Contains(buscandoname))
             {
                 PlayVideo(buscandoname);
@@ -86,7 +76,7 @@ namespace Asistente
 
         private void C_OnCapturing()
         {
-            radButton1.Visible = true;
+           ShowPanel();
             if ((!reproductor.URL.Contains(interactuando) && !reproductor.URL.Contains(ubicacion) &&
                 !reproductor.URL.Contains(generico))|| reproductor.playState == WMPPlayState.wmppsStopped)
             {
@@ -112,11 +102,12 @@ namespace Asistente
         }
 
         private Browser b;
+        private TakePic t;
         private void radButton1_Click(object sender, EventArgs e)
         {
-            radButton1.Visible = false;
+            HidePanel();
             Location = new Point(0);
-             b = new Browser();
+            b = new Browser();
             b.Location = new Point(Location.X+Size.Width);
             b.Play += Browser_Play;
             b.ShowDialog();
@@ -135,6 +126,24 @@ namespace Asistente
             radLabel2.Text = @"Estante:"+texto2;
             radLabel1.Visible = true;
             radLabel2.Visible = true;
+        }
+
+        private void ShowPanel()
+        {
+            radGroupBox1.Visible = true;
+        }
+        private void HidePanel()
+        {
+            radGroupBox1.Visible = false;
+        }
+
+       
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            t = new TakePic();
+            t.ShowDialog();
+           
         }
     }
 }
