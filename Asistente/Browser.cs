@@ -33,8 +33,8 @@ namespace Asistente
             webBrowser1.NewWindow += WebBrowser1_NewWindow;
             webBrowser1.DocumentCompleted += LoadCompleteEventHandler;
             // webBrowser1.GoHome();
-         //   webBrowser1.Navigate("C:/Users/HL/Desktop/busquedas/20161129123234/index.html");
-            webBrowser1.Navigate("http://biblioteca.iae.edu.ar/uhtbin/cgisirsi.exe/x/x/0/49/");
+          //  webBrowser1.Navigate("C:/Users/HL/Desktop/busquedas/20161129123234/index.html");
+           webBrowser1.Navigate("http://biblioteca.iae.edu.ar/uhtbin/cgisirsi.exe/x/x/0/49/");
           
         }
 

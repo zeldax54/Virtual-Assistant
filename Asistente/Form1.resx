@@ -120,4 +120,56 @@
   <metadata name="visualStudio2012DarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="tableLayoutPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="imgCamUser.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fotocapt.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="fotocapt.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <metadata name="compartir.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="foto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>78</value>
+  </metadata>
 </root>

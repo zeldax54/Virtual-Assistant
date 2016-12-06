@@ -22,16 +22,40 @@ namespace Asistente
             InitializeComponent();
         }
         private Timer _t=new Timer();
+        private Capture c = new Capture();
 
         private void TakePic_Load(object sender, EventArgs e)
         {
+            c.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 1280);
+            c.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 720);
+            c.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps, 30);
             _t.Tick += _t_Tick;
+            _t.Interval = 30;
+
+            // Application.Idle += ProcessFrame;
             _t.Start();
+          
+            //   c.ImageGrabbed += ProcessFrame;
         }
+
+        private void ProcessFrame(object sender, EventArgs e)
+        {
+            SendVideo();
+        }
+
 
         private void _t_Tick(object sender, EventArgs e)
         {
-           SendImage();
+           SendVideo();
+        }
+
+        private void SendVideo()
+        {
+            c.QueryFrame();
+            var imageFrame = c.QueryFrame().ToImage<Bgr, Byte>();
+            picbox.Image = imageFrame?.SmoothGaussian(5, 5, 2, 0);
+            pictureBox1.Image = imageFrame?.Bitmap; //?.SmoothGaussian(5, 5, 2, 0);
+     
         }
 
         private void radButton1_Click(object sender, EventArgs e)
@@ -48,21 +72,14 @@ namespace Asistente
                 img.Save(dir);
                 Process.Start(dir);
             }
-            catch (Exception ee)
-            {
+            catch (Exception ee){
                 FormStuffs.ShowMensaje(@"Ha ocurrido un problema mientras se tomaba la foto.Intente mas tarde."+'\n'+ee.Message);
-
-            }
+                }
         }
 
-        private Capture c=new Capture();
+   
 
-        private void SendImage()
-        {
-            c.QueryFrame();
-            var imageFrame = c.QueryFrame().ToImage<Bgr, Byte>();
-            picbox.Image = imageFrame?.SmoothGaussian(5, 5, 2, 0);
-        }
+     
 
 
 

@@ -10,71 +10,77 @@ using Emgu.CV.Structure;
 using Emgu.CV.UI;
 using Telerik.WinControls.UI;
 
-
 namespace Asistente
 {
 
     public class Capturadora
     {
-        private CascadeClassifier _cascadeClassifierfaces;
-        private CascadeClassifier _cascadeClassifiereyes;
-        public bool Threeminflag { get; set; }
-        public bool Capturing { get; set; }
-        public IImage ImagenOut { get; set; }
-
-
-        //Events
-        //Capturing
+        private readonly CascadeClassifier _cascadeClassifierfaces= new CascadeClassifier(Application.StartupPath + "/face.xml");
+        private readonly CascadeClassifier _cascadeClassifiereyes= new CascadeClassifier(Application.StartupPath + "/eye.xml");
+     
+        //Capturing Events
         public delegate void OnCapturingManager();
-
         public event OnCapturingManager OnCapturing;
-        //No capturing
+        //No capturing Events
         public delegate void OnNoCapturingManager();
-
         public event OnNoCapturingManager OnNoCapturing;
 
+        private readonly Capture _capture;
+        public bool StopRecon;
+        private const int Stoptime = 300000;
 
-        public void Capture(Capture capture, ref double elapsedTime, ref double nocapttime)
+       
+        public Capturadora()
         {
-            if (capture.QueryFrame() != null)
-            {
-                var imageFrame = capture.QueryFrame().ToImage<Bgr, Byte>();
-                if (imageFrame != null)
+            _capture = new Capture();
+            //_capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 640);
+           // _capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 480);
+             _capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 1280);
+            _capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 1024);
+            _capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps, 30);
+          
+        }
+
+        public void Capture(ref double elapsedTime, ref double nocapttime,ImageBox imgCamUser)
+        {
+            
+                if (_capture.QueryFrame() != null)
                 {
-                    var grayframe = imageFrame.Convert<Gray, byte>();
-                    _cascadeClassifierfaces = new CascadeClassifier(Application.StartupPath + "/face.xml");
-                    _cascadeClassifiereyes = new CascadeClassifier(Application.StartupPath + "/eye.xml");
-                    var faces = _cascadeClassifierfaces.DetectMultiScale(grayframe, 1.1, 10, Size.Empty);
-                    var eyes = _cascadeClassifiereyes.DetectMultiScale(grayframe, 1.1, 10, Size.Empty);
-                    if (!faces.Any() || !eyes.Any())
+                    var imageFrame = _capture.QueryFrame().ToImage<Bgr, Byte>();
+                    if (imageFrame != null && !StopRecon)
                     {
-                        Capturing = false;
-                        nocapttime += elapsedTime;
-                        if (nocapttime > 10000)
+                        var grayframe = imageFrame.Convert<Gray, byte>();
+                        var faces = _cascadeClassifierfaces.DetectMultiScale(grayframe, 1.1, 10, Size.Empty);
+                        var eyes = _cascadeClassifiereyes.DetectMultiScale(grayframe, 1.1, 10, Size.Empty);
+                        if (!faces.Any() || !eyes.Any())
                         {
-                            OnNoCapturing?.Invoke();
-                            Threeminflag = true;
-                            elapsedTime = 0;
+                           
+                            nocapttime += elapsedTime;
+                            if (nocapttime >= Stoptime)
+                            {
+                                OnNoCapturing?.Invoke();
+                                elapsedTime = 0;
+                                nocapttime = 0;
+                            }
+                        }
+                        else
+                        {
                             nocapttime = 0;
+                            OnCapturing?.Invoke();
+                            elapsedTime = 0;
+                            foreach (var face in faces)
+                                imageFrame.Draw(face, new Bgr(Color.LightGreen), 3, Emgu.CV.CvEnum.LineType.FourConnected);
+                            //foreach (var eye in eyes)
+                            //    imageFrame.Draw(eye, new Bgr(Color.Aqua), 3, Emgu.CV.CvEnum.LineType.AntiAlias);
                         }
                     }
-                    else
-                    {
-                        Threeminflag = false;
-                        nocapttime = 0;
-                        Capturing = true;
-                        OnCapturing?.Invoke();
-                        elapsedTime = 0;
-                        foreach (var face in faces)
-                            imageFrame.Draw(face, new Bgr(Color.Green), 3, Emgu.CV.CvEnum.LineType.FourConnected);
-                        foreach (var eye in eyes)
-                            imageFrame.Draw(eye, new Bgr(Color.Aqua), 3, Emgu.CV.CvEnum.LineType.AntiAlias);
-                    }
+                    imgCamUser.SetZoomScale(0.5, new Point(0, 0));
+                    imgCamUser.Image = imageFrame;
                 }
-                ImagenOut = imageFrame?.SmoothGaussian(5, 5, 2, 0);
-                nocapttime = (nocapttime/1000);
-            }
+            
+           
         }
+
 
 
 

@@ -29,31 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideosForm));
-            this.reproductor = new AxWMPLib.AxWindowsMediaPlayer();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
-            ((System.ComponentModel.ISupportInitialize)(this.reproductor)).BeginInit();
+            this.reproductor = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reproductor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reproductor
-            // 
-            this.reproductor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reproductor.Enabled = true;
-            this.reproductor.Location = new System.Drawing.Point(0, 0);
-            this.reproductor.Name = "reproductor";
-            this.reproductor.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("reproductor.OcxState")));
-            this.reproductor.Size = new System.Drawing.Size(628, 375);
-            this.reproductor.TabIndex = 0;
             // 
             // radButton1
             // 
@@ -108,6 +98,16 @@
             this.radButton2.Text = "Tomar Foto";
             this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
             // 
+            // reproductor
+            // 
+            this.reproductor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reproductor.Enabled = true;
+            this.reproductor.Location = new System.Drawing.Point(0, 0);
+            this.reproductor.Name = "reproductor";
+            this.reproductor.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("reproductor.OcxState")));
+            this.reproductor.Size = new System.Drawing.Size(628, 375);
+            this.reproductor.TabIndex = 0;
+            // 
             // VideosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,13 +125,13 @@
             this.Text = "VideosForm";
             this.ThemeName = "VisualStudio2012Dark";
             this.Load += new System.EventHandler(this.VideosForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reproductor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reproductor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,12 +139,11 @@
         }
 
         #endregion
-
-        private AxWMPLib.AxWindowsMediaPlayer reproductor;
         private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadButton radButton2;
+        private AxWMPLib.AxWindowsMediaPlayer reproductor;
     }
 }

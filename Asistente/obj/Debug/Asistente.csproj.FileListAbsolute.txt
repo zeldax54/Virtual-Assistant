@@ -28,7 +28,6 @@ C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.csproj.ResolveComReference.cache
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.VideosForm.resources
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\buscando.mp4
-C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Emgu.Util.dll
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\eye.xml
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\face.xml
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.Browser.resources
@@ -40,3 +39,6 @@ C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\obj\Debug\Asistente.TakePic.resources
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\WaterMark.png
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\WM.png
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\none.png
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Asistente.exe.config
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\foto.mp4

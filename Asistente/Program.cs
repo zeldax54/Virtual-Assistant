@@ -15,9 +15,9 @@ namespace Asistente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new Form1());
+        //   Application.Run(new Form1());
           //  Application.Run(new Browser());
-          //  Application.Run(new VideosForm());
+            Application.Run(new VideosForm());
         }
     }
 }
