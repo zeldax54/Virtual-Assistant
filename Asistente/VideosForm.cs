@@ -33,7 +33,7 @@ namespace Asistente
             _form.Fotoevent += Form_fotoevent;
             C = _form.Capt;
             _form.Show();
-            _form.Visible = false;
+          //  _form.Visible = false;
             // res.Location
             // Calculate location (etc. 1366 Width - form size...)
             reproductor.settings.setMode("loop", true);

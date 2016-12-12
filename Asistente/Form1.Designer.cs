@@ -141,6 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+           
             // 
             // 
             // 
@@ -149,6 +150,7 @@
             this.Text = "Form1";
             this.ThemeName = "VisualStudio2012Dark";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCamUser)).EndInit();

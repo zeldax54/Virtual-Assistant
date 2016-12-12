@@ -42,3 +42,6 @@ C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\none.png
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Asistente.exe.config
 C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Resources\foto.mp4
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Windows.winmd
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Facebook.dll
+C:\Users\HL\documents\visual studio 2015\Projects\Asistente\Asistente\bin\Debug\Facebook.xml
