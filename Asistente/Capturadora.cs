@@ -70,9 +70,9 @@ namespace Asistente
                             elapsedTime = 0;
                             foreach (var face in faces)
                                 imageFrame.Draw(face, new Bgr(Color.LightGreen), 3, Emgu.CV.CvEnum.LineType.FourConnected);
-                            //foreach (var eye in eyes)
-                            //    imageFrame.Draw(eye, new Bgr(Color.Aqua), 3, Emgu.CV.CvEnum.LineType.AntiAlias);
-                        }
+                        foreach (var eye in eyes)
+                            imageFrame.Draw(eye, new Bgr(Color.Aqua), 3, Emgu.CV.CvEnum.LineType.AntiAlias);
+                    }
                     }
                     imgCamUser.SetZoomScale(0.5, new Point(0, 0));
                     imgCamUser.Image = imageFrame;
